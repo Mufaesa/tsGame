@@ -34,3 +34,14 @@ objecten iets van game hoeven te weten. De rest van de classes daarentegen hebbe
 Game erbij kan.
 
 ![ulm diagram](./class-diagram.PNG)
+
+# Peer review - Wilco van Dijk
+Block.ts en Player.ts hebben beide een public draw functie. Ze extenden allebei van gameObject. Dan kan je de draw functie ook in gameobject plaatsen. Als je meerdere gaat toevoegen hoeft ie niet steeds in de class te staan. Als ie toch iets anders moet doen kan je de functie altijd nog overschrijven.
+
+Als je de draw functie in gameObject hebt staan kan je ook de properties width en height in gameobject zetten en niet apart in block.ts en player.ts. Dan kan je de height en width meegeven in de super().
+
+In de interface staat niet de property player. Misschien handig om dit wel in de interface te plaatsen waardoor het verplicht wordt om player mee te geven. Zo kan je altijd player aanroepen in de behaviour.
+
+Het is nu dat je bij elke keypress de player laat springen. Misschien een check op welke key er wordt gedrukt zodat je als speler niet verrast wordt als je perongeluk een key indrukt. Dat alleen de speler springt bij een spatie klik.
+
+De utils class ziet er goed uit. slim om gameobject te gebruiken. Zo kan je elk object wat gameobject extend daarvoor gebruiken.
